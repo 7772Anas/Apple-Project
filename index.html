@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim the Apple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Aim the Apple</h1>
+    <img src="Apple PNG.png" alt="Apple" id='apple-image'>
+    <img src="Gun.png" alt="Gun" id='gun-image'>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var gunImage = document.getElementById('gun-image');
+            
+            // Event listener to hide the gun image when clicked
+            gunImage.addEventListener('click', function(event) {
+                gunImage.style.display = 'none';
+            });
+            
+            // Event listener to show the gun image when anything else on the document is clicked
+            document.addEventListener('click', function(event) {
+                if (event.target !== gunImage) {
+                    gunImage.style.display = 'inline';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
